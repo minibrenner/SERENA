@@ -11,35 +11,41 @@
     <title>Serena</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Preconnect / Preload para fontes e mídia crítica -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Dê prioridade ao vídeo principal se ele for essencial no topo -->
+    <link rel="preload" href="assets/images/GIF.mp4" as="video" type="video/mp4">
+
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-    <!--Google Fonts link-->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700,700i" rel="stylesheet">
+    <!-- Google Fonts (com display=swap para evitar FOIT) -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700,700i&display=swap" rel="stylesheet">
 
-
+    <!-- CSS principal (minificados quando possível) -->
     <link rel="stylesheet" href="assets/css/iconfont.css">
     <link rel="stylesheet" href="assets/css/slick/slick.css">
     <link rel="stylesheet" href="assets/css/slick/slick-theme.css">
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/jquery.fancybox.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <!-- Carrega CSS menos crítico de forma não bloqueante -->
+    <link rel="preload" href="assets/css/jquery.fancybox.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/jquery.fancybox.css"></noscript>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
+    <link rel="preload" href="assets/css/magnific-popup.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/magnific-popup.css"></noscript>
 
+    <!-- For Plugins external css-->
+    <link rel="stylesheet" href="assets/css/plugins.css"/>
 
-    <!--For Plugins external css-->
-    <link rel="stylesheet" href="assets/css/plugins.css" />
-
-    <!--Theme custom css -->
+    <!-- Theme custom css -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!--Theme Responsive css-->
-    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <!-- Theme Responsive css -->
+    <link rel="stylesheet" href="assets/css/responsive.css"/>
 
-    <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js" defer></script>
 </head>
 
 <body data-spy="scroll" data-target=".navbar-collapse">
@@ -65,26 +71,18 @@
                                             <span class="icon-bar"></span>
                                         </button>
                                         <a class="navbar-brand" href="#home">
-                                            <img src="assets/images/logo.png" />
+                                            <img src="assets/images/logo.png" alt="Serena" width="120" height="40" decoding="async" fetchpriority="high"/>
                                         </a>
                                     </div>
 
                                     <!-- Collect the nav links, forms, and other content for toggling -->
-
-
-
                                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
                                         <ul class="nav navbar-nav navbar-right">
                                             <li><a href="#home">INICIO</a></li>
                                             <li><a href="#history">SOBRE NÓS</a></li>
-
-
                                             <li><a href="#blog">INFORMAÇÕES</a></li>
                                             <li><a href="#contact">CONTATO</a></li>
                                         </ul>
-
-
                                     </div>
 
                                 </div>
@@ -96,9 +94,6 @@
 
             </div>
         </header> <!--End of header -->
-
-
-
 
         <!--home Section -->
         <section id="home" class="home">
@@ -132,7 +127,6 @@
             </div>
         </section><!--End of home section -->
 
-
         <!--feature section -->
         <section id="feature" class="feature sections">
             <div class="container">
@@ -142,7 +136,7 @@
                         <div class="col-sm-3">
                             <div class="single_feature">
                                 <div class="single_feature_icon">
-                                    <i class="fa fa-clone"></i>
+                                    <i class="fa fa-clone" aria-hidden="true"></i>
                                 </div>
 
                                 <h4>Diárias e longa permanência</h4>
@@ -154,7 +148,7 @@
                         <div class="col-sm-3">
                             <div class="single_feature">
                                 <div class="single_feature_icon">
-                                    <i class="fa fa-heart-o"></i>
+                                    <i class="fa fa-heart-o" aria-hidden="true"></i>
                                 </div>
 
                                 <h4>Cuidado humanizado e profissional para idosos</h4>
@@ -167,7 +161,7 @@
                         <div class="col-sm-3">
                             <div class="single_feature">
                                 <div class="single_feature_icon">
-                                    <i class="fa fa-lightbulb-o"></i>
+                                    <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
                                 </div>
                                 <h4>SEMPRE TRABALHANDO COM CRIATIVIDADE E PROFISSIONALISMO</h4>
                                 <div class="separator3"></div>
@@ -179,7 +173,7 @@
                         <div class="col-sm-3">
                             <div class="single_feature">
                                 <div class="single_feature_icon">
-                                    <i class="fa fa-comments-o"></i>
+                                    <i class="fa fa-comments-o" aria-hidden="true"></i>
                                 </div>
 
                                 <h4>SUPORTE 24H</h4>
@@ -195,7 +189,6 @@
         </section><!--End of feature Section -->
         <hr />
 
-
         <!-- History section -->
         <section id="history" class="history sections">
             <div class="container">
@@ -203,7 +196,7 @@
                     <div class="main_history">
                         <div class="col-sm-6">
                             <div class="single_history_img">
-                                <img src="assets/images/casa.png" alt="" />
+                                <img src="assets/images/casa.png" alt="" width="600" height="400" loading="lazy" decoding="async"/>
                             </div>
                         </div>
 
@@ -221,15 +214,12 @@
                                     vida em um ambiente tranquilo, seguro e afetuoso — fiel ao nome Serena. Mais do que
                                     cuidar, valorizamos histórias e proporcionamos um envelhecer digno e feliz.
                                 </p>
-
-
                             </div>
                         </div>
                     </div>
                 </div><!--End of row -->
             </div><!--End of container -->
         </section><!--End of history -->
-
 
         <!-- service Section -->
         <section id="service" class="service">
@@ -260,7 +250,7 @@
                                             </div>
                                             <div class="col-sm-1 col-xs-1">
                                                 <figure class="single_service_icon">
-                                                    <i class="fa fa-heart"></i>
+                                                    <i class="fa fa-heart" aria-hidden="true"></i>
                                                 </figure><!-- End of figure -->
                                             </div>
                                         </div>
@@ -282,7 +272,7 @@
                                             </div>
                                             <div class="col-sm-1 col-xs-1">
                                                 <figure class="single_service_icon">
-                                                    <i class="fa fa-heart"></i>
+                                                    <i class="fa fa-heart" aria-hidden="true"></i>
                                                 </figure><!-- End of figure -->
                                             </div>
                                         </div>
@@ -305,7 +295,7 @@
                                             </div>
                                             <div class="col-sm-1 col-xs-1">
                                                 <figure class="single_service_icon">
-                                                    <i class="fa fa-heart"></i>
+                                                    <i class="fa fa-heart" aria-hidden="true"></i>
                                                 </figure><!-- End of figure -->
                                             </div>
                                         </div>
@@ -318,7 +308,7 @@
                         <div class="col-md-6 col-sm-12 no-padding">
                             <figure class="single_service single_service_img">
                                 <div class="overlay-img"></div>
-                                <img src="assets/images/japa.png" alt="" />
+                                <img src="assets/images/japa.png" alt="" width="800" height="600" loading="lazy" decoding="async"/>
                             </figure><!-- End of figure -->
                         </div><!-- End of col-sm-6 -->
 
@@ -326,7 +316,6 @@
                 </div><!-- End of row -->
             </div><!-- End of Container-fluid -->
         </section><!-- End of service Section -->
-
 
         <!-- Study Section -->
         <section id="study" class="study text-center wow fadeIn" data-wow-duration="2s" data-wow-dealy="1.5s">
@@ -349,50 +338,43 @@
                                         <div class="study_slider">
                                             <div class="item">
                                                 <div class="s_study_icon">
-                                                    <i class="fa fa-lightbulb-o"></i>
+                                                    <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
                                                 </div>
                                                 <h4>PROFISSIONAIS</h4>
                                                 <div class="separator3"></div>
                                                 <p>Em nossa equipe, contamos com medicos, enfermeiras, fisioteapeuta,
                                                     cozinheira, nutricionista e profissionais em atividades ocupacionais
                                                     diarias!</p>
-
-
                                             </div>
                                             <div class="item">
                                                 <div class="s_study_icon">
-                                                    <i class="fa fa-lightbulb-o"></i>
+                                                    <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
                                                 </div>
                                                 <h4>Ambiente</h4>
                                                 <div class="separator3"></div>
                                                 <p>Ambiente seguro, agradavel, arborizado e acolhedor! Uma verdadeira
                                                     extensão da casa!</p>
-
-
                                             </div>
                                             <div class="item">
                                                 <div class="s_study_icon">
-                                                    <i class="fa fa-lightbulb-o"></i>
+                                                    <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
                                                 </div>
                                                 <h4>visitas</h4>
                                                 <div class="separator3"></div>
                                                 <p>Nossos horarios de visitas são diarios extensos e flexiveis, para que
                                                     você possa acompanhar de perto a pessoa que você mais ama</p>
-
-
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-
                             <div class="single_study_right_img">
                                 <div class="col-sm-6">
                                     <div class="single_study_img">
-                                        <video src="assets/images/GIF.mp4" autoplay loop muted
-                                            style="width: 900px; border-radius: 0.5rem;"></video>
-
+                                        <video src="assets/images/GIF.mp4" autoplay loop muted playsinline preload="metadata"
+                                            style="width: 900px; border-radius: 0.5rem;" poster="assets/images/casa.png">
+                                        </video>
                                     </div>
                                 </div>
                             </div>
@@ -402,7 +384,6 @@
             </div><!-- End off Container -->
         </section><!-- End off Study Section -->
 
-
         <!-- Counter Section -->
         <section id="counter" class="counter">
             <div class="video_overlay">
@@ -410,12 +391,11 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="main_counter_area text-center">
-
                                 <div class="row">
                                     <div class="single_counter border_right">
                                         <div class="col-sm-3 col-xs-12">
                                             <div class="single_counter_item">
-                                                <i class="icon icon-thumbs-up"></i>
+                                                <i class="icon icon-thumbs-up" aria-hidden="true"></i>
                                                 <h2 class="statistic-counter">90</h2>
                                                 <h4 class="">Familiares que indicam a Serena</h4>
                                             </div>
@@ -425,7 +405,7 @@
                                     <div class="single_counter">
                                         <div class="col-sm-3 col-xs-12">
                                             <div class="single_counter_item">
-                                                <i class="icon icon-business-3"></i>
+                                                <i class="icon icon-business-3" aria-hidden="true"></i>
                                                 <h2 class="statistic-counter">10</h2>
                                                 <h4 class="">Nota em excelencia de hotelaria para idosos em Indaiatuba!
                                                 </h4>
@@ -436,7 +416,7 @@
                                     <div class="single_counter">
                                         <div class="col-sm-3 col-xs-12">
                                             <div class="single_counter_item">
-                                                <i class="icon icon-people-32"></i>
+                                                <i class="icon icon-people-32" aria-hidden="true"></i>
                                                 <h2 class="statistic-counter">16</h2>
                                                 <h4 class="">Hospedes</h4>
                                             </div>
@@ -447,7 +427,7 @@
                                     <div class="single_counter">
                                         <div class="col-sm-3 col-xs-12">
                                             <div class="single_counter_item">
-                                                <i class="icon icon-cup"></i>
+                                                <i class="icon icon-cup" aria-hidden="true"></i>
                                                 <h2 class="statistic-counter">6</h2>
                                                 <h4 class="">Refeições diarias</h4>
 
@@ -461,14 +441,6 @@
                 </div>
             </div><!-- End off container -->
         </section> <!-- End of counter section -->
-
-
-
-
-        <!-- Team Section -->
-
-        <!-- Client Logo Section -->
-
 
         <!-- Blog Section -->
         <section id="blog" class="blog">
@@ -490,15 +462,10 @@
                                     <div class="row">
                                         <div class="col-sm-6 no-padding">
                                             <div class="single_blog_img">
-                                                <video src="/assets/images/manha.mp4" autoplay muted loop playsinline
-                                                    style="
-    width:100%;
-    aspect-ratio:200px;     /* altura automática baseada na largura */
-    object-fit:cover;       /* preenche igual background-size: cover */
-    display:block;
-    border-radius:8px;
-    background:#000;        /* evita “bordas” claras enquanto carrega */
-  "></video>
+                                                <video src="/assets/images/manha.mp4" autoplay muted loop playsinline preload="metadata"
+                                                    style="width:100%; aspect-ratio:200px; object-fit:cover; display:block; border-radius:8px; background:#000;"
+                                                    poster="assets/images/casa.png">
+                                                </video>
                                             </div>
                                         </div>
                                         <div class="col-sm-6 no-padding">
@@ -512,8 +479,6 @@
                                                     respiração, além de atividades cognitivas, para manter mente e corpo
                                                     ativos com
                                                     segurança e acompanhamento profissional.</p>
-
-
                                             </div>
                                         </div>
                                     </div>
@@ -525,15 +490,10 @@
                                     <div class="row">
                                         <div class="col-sm-6 no-padding">
                                             <div class="single_blog_img">
-                                                <video src="/assets/images/tarde.mp4" autoplay muted loop playsinline
-                                                    style="
-    width:100%;
-    aspect-ratio:200px;     /* altura automática baseada na largura */
-    object-fit:cover;       /* preenche igual background-size: cover */
-    display:block;
-    border-radius:8px;
-    background:#000;        /* evita “bordas” claras enquanto carrega */
-  "></video>
+                                                <video src="/assets/images/tarde.mp4" autoplay muted loop playsinline preload="metadata"
+                                                    style="width:100%; aspect-ratio:200px; object-fit:cover; display:block; border-radius:8px; background:#000;"
+                                                    poster="assets/images/casa.png">
+                                                </video>
                                             </div>
                                         </div>
                                         <div class="col-sm-6 no-padding">
@@ -546,28 +506,21 @@
                                                     bem-estar. No interior, oferecemos musicoterapia e oficinas manuais.
                                                     Tudo com monitoramento contínuo, pausas para água e lanches,
                                                     respeitando o ritmo individual de cada hóspede.</p>
-
-
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
                             <div class="col-sm-6">
                                 <div class="single_blog_area textwhite">
                                     <div class="row">
-
                                         <div class="col-sm-6 col-sm-push-6 no-padding">
                                             <div class="single_blog_img">
-                                                <video src="/assets/images/fimTarde.mp4" autoplay muted loop playsinline
-                                                    style="
-    width:100%;
-    aspect-ratio:200px;     /* altura automática baseada na largura */
-    object-fit:cover;       /* preenche igual background-size: cover */
-    display:block;
-    border-radius:8px;
-    background:#000;        /* evita “bordas” claras enquanto carrega */
-  "></video>
+                                                <video src="/assets/images/fimTarde.mp4" autoplay muted loop playsinline preload="metadata"
+                                                    style="width:100%; aspect-ratio:200px; object-fit:cover; display:block; border-radius:8px; background:#000;"
+                                                    poster="assets/images/casa.png">
+                                                </video>
                                             </div>
                                         </div>
 
@@ -582,8 +535,6 @@
                                                     socialização sem esforço físico. Nesse período também realizamos
                                                     orientações posturais e alongamentos suaves, preparando para
                                                     a noite.</p>
-
-
                                             </div>
                                         </div>
 
@@ -596,15 +547,10 @@
                                     <div class="row">
                                         <div class="col-sm-6 col-sm-push-6 no-padding">
                                             <div class="single_blog_img">
-                                                <video src="/assets/images/noite.mp4" autoplay muted loop playsinline
-                                                    style="
-    width:100%;
-    aspect-ratio:200px;     /* altura automática baseada na largura */
-    object-fit:cover;       /* preenche igual background-size: cover */
-    display:block;
-    border-radius:8px;
-    background:#000;        /* evita “bordas” claras enquanto carrega */
-  "></video>
+                                                <video src="/assets/images/noite.mp4" autoplay muted loop playsinline preload="metadata"
+                                                    style="width:100%; aspect-ratio:200px; object-fit:cover; display:block; border-radius:8px; background:#000;"
+                                                    poster="assets/images/casa.png">
+                                                </video>
                                             </div>
                                         </div>
                                         <div class="col-sm-6 col-sm-pull-6 no-padding">
@@ -618,10 +564,7 @@
                                                     higiene noturna, checagem de medicação, ceia leve para quem precisa
                                                     e preparo do quarto (iluminação, temperatura, segurança). A equipe
                                                     permanece em acompanhamento contínuo durante a noite.
-
                                                 </p>
-
-
                                             </div>
                                         </div>
 
@@ -635,7 +578,6 @@
                 </div>
             </div><!-- End off container -->
         </section><!-- End off Blog Section -->
-
 
         <section id="contact" class="contact">
             <div class="container">
@@ -652,47 +594,41 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="main_contact_info">
-                                        <div class="row">
-                                            <div class="contact_info_content padding-top-90 padding-bottom-60 p_l_r">
-                                                <div class="col-sm-12">
-                                                    <div class="single_contact_info">
-                                                        <div class="single_info_text">
-                                                            <h3>Endereço</h3>
-                                                            <h4>R. Srg. Adelino Ribeiro, 15 - Vila Brizzola, Indaiatuba
-                                                                - SP, 13343-480</h4>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-12">
-                                                    <div class="single_contact_info">
-                                                        <div class="single_info_text">
-                                                            <h3>Whatsapp</h3>
-                                                            <h4>
-                                                                <a href="https://wa.me/5519994917035">+55
-                                                                    19 99491-7035
-                                                                </a>
-                                                            </h4>
-
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
+                    <div class="row">
+                        <div class="contact_info_content padding-top-90 padding-bottom-60 p_l_r">
+                            <div class="col-sm-12">
+                                <div class="single_contact_info">
+                                    <div class="single_info_text">
+                                        <h3>Endereço</h3>
+                                        <h4>R. Srg. Adelino Ribeiro, 15 - Vila Brizzola, Indaiatuba
+                                            - SP, 13343-480</h4>
                                     </div>
                                 </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="single_contact_info">
+                                    <div class="single_info_text">
+                                        <h3>Whatsapp</h3>
+                                        <h4>
+                                            <a href="https://wa.me/5519994917035">+55
+                                                19 99491-7035
+                                            </a>
+                                        </h4>
 
+                                    </div>
+                                </div>
+                            </div>
 
-
+                        </div>
+                    </div>
+                </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section><!-- End of contact section -->
-
-
-
 
         <!--Footer section-->
         <section class="footer">
@@ -703,13 +639,9 @@
                             <div class="row">
                                 <div class="col-sm-6 col-xs-12">
                                     <div class="flowus">
-
-                                        <a href="https://share.google/aVse1VLV5BdxswWb0"><i
-                                                class="fa fa-google-plus"></i></a>
-                                        <a href="https://www.instagram.com/serena_indaiatuba"><i
-                                                class="fa fa-instagram"></i></a>
-
-                                        <a href="https://wa.me/5519994917035"><i class="fa fa-whatsapp"></i></a>
+                                        <a href="https://share.google/aVse1VLV5BdxswWb0" aria-label="Google Plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                        <a href="https://www.instagram.com/serena_indaiatuba" aria-label="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                        <a href="https://wa.me/5519994917035" aria-label="WhatsApp"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
 
@@ -721,40 +653,28 @@
             </div>
         </section><!-- End off footer Section-->
 
-
-
-
-
-
-
-
-
-
-
     </div>
 
     <!-- START SCROLL TO TOP  -->
-
     <div class="scrollup">
-        <a href="#"><i class="fa fa-chevron-up"></i></a>
+        <a href="#"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
     </div>
 
-    <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
-    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <!-- JS (ordem otimizada + defer) -->
+    <script src="assets/js/vendor/jquery-1.11.2.min.js" defer></script>
+    <script src="assets/js/vendor/bootstrap.min.js" defer></script>
 
-    <script src="assets/js/jquery.magnific-popup.js"></script>
-    <script src="assets/js/jquery.mixitup.min.js"></script>
-    <script src="assets/js/jquery.easing.1.3.js"></script>
-    <script src="assets/js/jquery.masonry.min.js"></script>
+    <!-- Plugins (apenas minificados / sem duplicar slick) -->
+    <script src="assets/js/jquery.magnific-popup.js" defer></script>
+    <script src="assets/js/jquery.mixitup.min.js" defer></script>
+    <script src="assets/js/jquery.easing.1.3.js" defer></script>
+    <script src="assets/js/jquery.masonry.min.js" defer></script>
 
-    <!--slick slide js -->
-    <script src="assets/css/slick/slick.js"></script>
-    <script src="assets/css/slick/slick.min.js"></script>
+    <!-- slick: usar somente um arquivo -->
+    <script src="assets/css/slick/slick.min.js" defer></script>
 
-
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/plugins.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
 
 </body>
-
 </html>
