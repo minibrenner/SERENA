@@ -15,8 +15,6 @@
     <!-- Preconnect / Preload para fontes e mídia crítica -->
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Dê prioridade ao vídeo principal se ele for essencial no topo -->
-    <link rel="preload" href="assets/images/GIF.mp4" as="video" type="video/mp4">
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
@@ -37,13 +35,13 @@
     <noscript><link rel="stylesheet" href="assets/css/magnific-popup.css"></noscript>
 
     <!-- For Plugins external css-->
-    <link rel="stylesheet" href="assets/css/plugins.css"/>
+    <link rel="stylesheet" href="assets/css/plugins.css" />
 
-    <!-- Theme custom css -->
+    <!--Theme custom css -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <!-- Theme Responsive css -->
-    <link rel="stylesheet" href="assets/css/responsive.css"/>
+    <!--Theme Responsive css-->
+    <link rel="stylesheet" href="assets/css/responsive.css" />
 
     <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js" defer></script>
 </head>
@@ -71,7 +69,7 @@
                                             <span class="icon-bar"></span>
                                         </button>
                                         <a class="navbar-brand" href="#home">
-                                            <img src="assets/images/logo.png" alt="Serena" width="120" height="40" decoding="async" fetchpriority="high"/>
+                                            <img src="assets/images/logo.png" alt="Serena" decoding="async" fetchpriority="high"/>
                                         </a>
                                     </div>
 
@@ -372,8 +370,8 @@
                             <div class="single_study_right_img">
                                 <div class="col-sm-6">
                                     <div class="single_study_img">
-                                        <video src="assets/images/GIF.mp4" autoplay loop muted playsinline preload="metadata"
-                                            style="width: 900px; border-radius: 0.5rem;" poster="assets/images/casa.png">
+                                        <video src="assets/images/GIF.mp4" autoplay loop muted playsinline preload="metadata" data-autoposter
+                                            style="width: 900px; border-radius: 0.5rem;">
                                         </video>
                                     </div>
                                 </div>
@@ -462,9 +460,8 @@
                                     <div class="row">
                                         <div class="col-sm-6 no-padding">
                                             <div class="single_blog_img">
-                                                <video src="/assets/images/manha.mp4" autoplay muted loop playsinline preload="metadata"
-                                                    style="width:100%; aspect-ratio:200px; object-fit:cover; display:block; border-radius:8px; background:#000;"
-                                                    poster="assets/images/casa.png">
+                                                <video src="/assets/images/manha.mp4" autoplay muted loop playsinline preload="metadata" data-autoposter
+                                                    style="width:100%; aspect-ratio:200px; object-fit:cover; display:block; border-radius:8px; background:#000;">
                                                 </video>
                                             </div>
                                         </div>
@@ -490,9 +487,8 @@
                                     <div class="row">
                                         <div class="col-sm-6 no-padding">
                                             <div class="single_blog_img">
-                                                <video src="/assets/images/tarde.mp4" autoplay muted loop playsinline preload="metadata"
-                                                    style="width:100%; aspect-ratio:200px; object-fit:cover; display:block; border-radius:8px; background:#000;"
-                                                    poster="assets/images/casa.png">
+                                                <video src="/assets/images/tarde.mp4" autoplay muted loop playsinline preload="metadata" data-autoposter
+                                                    style="width:100%; aspect-ratio:200px; object-fit:cover; display:block; border-radius:8px; background:#000;">
                                                 </video>
                                             </div>
                                         </div>
@@ -517,9 +513,8 @@
                                     <div class="row">
                                         <div class="col-sm-6 col-sm-push-6 no-padding">
                                             <div class="single_blog_img">
-                                                <video src="/assets/images/fimTarde.mp4" autoplay muted loop playsinline preload="metadata"
-                                                    style="width:100%; aspect-ratio:200px; object-fit:cover; display:block; border-radius:8px; background:#000;"
-                                                    poster="assets/images/casa.png">
+                                                <video src="/assets/images/fimTarde.mp4" autoplay muted loop playsinline preload="metadata" data-autoposter
+                                                    style="width:100%; aspect-ratio:200px; object-fit:cover; display:block; border-radius:8px; background:#000;">
                                                 </video>
                                             </div>
                                         </div>
@@ -547,9 +542,8 @@
                                     <div class="row">
                                         <div class="col-sm-6 col-sm-push-6 no-padding">
                                             <div class="single_blog_img">
-                                                <video src="/assets/images/noite.mp4" autoplay muted loop playsinline preload="metadata"
-                                                    style="width:100%; aspect-ratio:200px; object-fit:cover; display:block; border-radius:8px; background:#000;"
-                                                    poster="assets/images/casa.png">
+                                                <video src="/assets/images/noite.mp4" autoplay muted loop playsinline preload="metadata" data-autoposter
+                                                    style="width:100%; aspect-ratio:200px; object-fit:cover; display:block; border-radius:8px; background:#000;">
                                                 </video>
                                             </div>
                                         </div>
@@ -594,35 +588,38 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="main_contact_info">
-                    <div class="row">
-                        <div class="contact_info_content padding-top-90 padding-bottom-60 p_l_r">
-                            <div class="col-sm-12">
-                                <div class="single_contact_info">
-                                    <div class="single_info_text">
-                                        <h3>Endereço</h3>
-                                        <h4>R. Srg. Adelino Ribeiro, 15 - Vila Brizzola, Indaiatuba
-                                            - SP, 13343-480</h4>
+                                        <div class="row">
+                                            <div class="contact_info_content padding-top-90 padding-bottom-60 p_l_r">
+                                                <div class="col-sm-12">
+                                                    <div class="single_contact_info">
+                                                        <div class="single_info_text">
+                                                            <h3>Endereço</h3>
+                                                            <h4>R. Srg. Adelino Ribeiro, 15 - Vila Brizzola, Indaiatuba
+                                                                - SP, 13343-480</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12">
+                                                    <div class="single_contact_info">
+                                                        <div class="single_info_text">
+                                                            <h3>Whatsapp</h3>
+                                                            <h4>
+                                                                <a href="https://wa.me/5519994917035">+55
+                                                                    19 99491-7035
+                                                                </a>
+                                                            </h4>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-sm-12">
-                                <div class="single_contact_info">
-                                    <div class="single_info_text">
-                                        <h3>Whatsapp</h3>
-                                        <h4>
-                                            <a href="https://wa.me/5519994917035">+55
-                                                19 99491-7035
-                                            </a>
-                                        </h4>
 
-                                    </div>
-                                </div>
-                            </div>
 
-                        </div>
-                    </div>
-                </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>
@@ -675,6 +672,71 @@
 
     <script src="assets/js/plugins.js" defer></script>
     <script src="assets/js/main.js" defer></script>
+
+    <!-- AutoPoster: gera automaticamente poster/thumbnail do 1º frame de cada vídeo com data-autoposter -->
+    <script>
+    (function () {
+      const JPEG_QUALITY = 0.8;        // qualidade do poster gerado
+      const SEEK_TIME = 0.1;           // segundos para fugir do frame preto do t=0
+      const SELECTOR = 'video[data-autoposter]';
+
+      function capturePoster(video) {
+        try {
+          const w = video.videoWidth || 0;
+          const h = video.videoHeight || 0;
+          if (!w || !h) return;
+          const canvas = document.createElement('canvas');
+          canvas.width = w; canvas.height = h;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(video, 0, 0, w, h);
+          const dataUrl = canvas.toDataURL('image/jpeg', JPEG_QUALITY);
+          video.setAttribute('poster', dataUrl);
+        } catch (e) {
+          // silencioso: se houver CORS, apenas não define poster
+        }
+      }
+
+      function initAutoPoster(video) {
+        video.muted = true;
+        video.playsInline = true;
+
+        if (video.readyState >= 2) {
+          capturePoster(video);
+          return;
+        }
+
+        video.addEventListener('loadedmetadata', function onMeta() {
+          video.removeEventListener('loadedmetadata', onMeta);
+          try {
+            const t = isFinite(video.duration) && video.duration > 0
+              ? Math.min(SEEK_TIME, Math.max(0, video.duration * 0.02))
+              : SEEK_TIME;
+            video.currentTime = t;
+          } catch (_) {}
+        }, { passive: true });
+
+        video.addEventListener('seeked', function onSeeked() {
+          video.removeEventListener('seeked', onSeeked);
+          capturePoster(video);
+        }, { passive: true });
+
+        video.addEventListener('loadeddata', function onData() {
+          video.removeEventListener('loadeddata', onData);
+          if (!video.getAttribute('poster')) capturePoster(video);
+        }, { passive: true });
+      }
+
+      function boot() {
+        document.querySelectorAll(SELECTOR).forEach(initAutoPoster);
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', boot, { once: true });
+      } else {
+        boot();
+      }
+    })();
+    </script>
 
 </body>
 </html>
